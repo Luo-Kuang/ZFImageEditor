@@ -8,13 +8,18 @@
 
 #import "ZFImageEditorVC.h"
 #import <Masonry.h>
+#import "../Tools/TopBar/ZFIETopBar.h"
+#import "../Tools/BottomBar/ZFIEBottomBar.h"
+#import "../Tools/FilterTool/ZFIEFilterTool.h"
 
 @interface ZFImageEditorVC ()
-@property (nonatomic, strong) UIView *topView;
+@property (nonatomic, strong) ZFIETopBar *topView;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UIView *bottomView;
-@property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) ZFIEBottomBar *bottomView;
+@property (nonatomic, strong) UIView *operationBar;
+
+
 
 @end
 
@@ -22,18 +27,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.navigationController) {
+        self.navigationController.navigationBar.hidden = YES;
+    }
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     [self addSubviews];
     [self addConstraints];
+    
 }
 
 - (void)addConstraints {
-    
-
+   
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view);
         make.right.mas_equalTo(self.view);
         make.left.mas_equalTo(self.view);
-        make.height.mas_equalTo(64);
+        make.height.mas_equalTo(44);
     }];
     
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -43,44 +53,39 @@
         make.height.mas_equalTo(44);
     }];
     
+    
+    [self.operationBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view);
+        make.right.mas_equalTo(self.view);
+        make.bottom.mas_equalTo(self.bottomView.mas_top);
+        make.height.mas_equalTo(0);
+    }];
+    
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view);
         make.right.mas_equalTo(self.view);
         make.top.mas_equalTo(self.topView.mas_bottom);
-        make.bottom.mas_equalTo(self.bottomView.mas_top);
+        make.bottom.mas_equalTo(self.operationBar.mas_top);
     }];
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.contentView);
     }];
-    [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.topView).offset(0);
-        make.left.mas_equalTo(self.topView).offset(10);
-        make.width.mas_equalTo(44);
-        make.height.mas_equalTo(44);
-    }];
-
+    
 }
 
 #pragma mark - Getter
-- (UIButton *)backButton{
-    if (_backButton == nil) {
-        _backButton = [[UIButton alloc] init];
-        [_backButton setTitle:@"返回" forState:UIControlStateNormal];
-        [_backButton addTarget:self action:@selector(backButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+- (UIView *)operationBar{
+    if (_operationBar == nil) {
+        _operationBar = [[UIView alloc] init];
     }
-    return _backButton;
+    return _operationBar;
 }
 
-- (void)backButtonClick:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
 
 - (UIView *)topView {
     if (_topView == nil) {
-        _topView = [[UIView alloc] init];
+        _topView = [[ZFIETopBar alloc] init];
     }
     return _topView;
 }
@@ -103,7 +108,10 @@
 
 - (UIView *)bottomView {
     if (_bottomView == nil) {
-        _bottomView = [[UIView alloc] init];
+        ZFIEFilterTool *filter = [[ZFIEFilterTool alloc] initWithName:@"Filter" iconName:@"zfiefilterbuttonicon"];
+        ZFIEFilterTool *filter1 = [[ZFIEFilterTool alloc] initWithName:@"Magic" iconName:@"zfiemagicIconNomal"];
+        ZFIEFilterTool *filter2 = [[ZFIEFilterTool alloc] initWithName:@"Size" iconName:@"zfiefilterbuttonsizeButtonicon"];
+        _bottomView = [[ZFIEBottomBar alloc] initWithTarget:self tools:@[filter, filter1, filter2]];
     }
     return _bottomView;
 }
@@ -112,14 +120,19 @@
 - (void)addSubviews {
 
     [self.view addSubview:self.topView];
-    [self.topView addSubview:self.backButton];
 
     [self.view addSubview:self.contentView];
 
     [self.contentView addSubview:self.imageView];
 
+    [self.view addSubview:self.operationBar];
+    
     [self.view addSubview:self.bottomView];
     
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end

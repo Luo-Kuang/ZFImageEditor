@@ -15,8 +15,11 @@
 		7DFDDA78217F120C009C457E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDDA76217F120C009C457E /* LaunchScreen.storyboard */; };
 		7DFDDA7B217F120C009C457E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDA7A217F120C009C457E /* main.m */; };
 		7DFDDA84217F1491009C457E /* ZFImageEditorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDA83217F1491009C457E /* ZFImageEditorVC.m */; };
-		7DFDDA87217F2B05009C457E /* ZFImageEditorBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDA86217F2B05009C457E /* ZFImageEditorBaseVC.m */; };
 		7DFDDA90217F6425009C457E /* ZFIETopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDA8F217F6425009C457E /* ZFIETopBar.m */; };
+		7DFDDA9C217F7BC3009C457E /* ZFIEBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDA9B217F7BC3009C457E /* ZFIEBottomBar.m */; };
+		7DFDDAA4217F8080009C457E /* ZFIEFilterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDAA3217F8080009C457E /* ZFIEFilterTool.m */; };
+		7DFDDAA7217F8995009C457E /* ZFIEToolBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDAA5217F8995009C457E /* ZFIEToolBase.m */; };
+		7DFDDAAC217F8B6C009C457E /* ZFIEToolItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDDAAB217F8B6C009C457E /* ZFIEToolItemCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +36,16 @@
 		7DFDDA7A217F120C009C457E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DFDDA82217F1491009C457E /* ZFImageEditorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFImageEditorVC.h; sourceTree = "<group>"; };
 		7DFDDA83217F1491009C457E /* ZFImageEditorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFImageEditorVC.m; sourceTree = "<group>"; };
-		7DFDDA85217F2B05009C457E /* ZFImageEditorBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFImageEditorBaseVC.h; sourceTree = "<group>"; };
-		7DFDDA86217F2B05009C457E /* ZFImageEditorBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFImageEditorBaseVC.m; sourceTree = "<group>"; };
 		7DFDDA8E217F6425009C457E /* ZFIETopBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFIETopBar.h; sourceTree = "<group>"; };
 		7DFDDA8F217F6425009C457E /* ZFIETopBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFIETopBar.m; sourceTree = "<group>"; };
+		7DFDDA9A217F7BC3009C457E /* ZFIEBottomBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFIEBottomBar.h; sourceTree = "<group>"; };
+		7DFDDA9B217F7BC3009C457E /* ZFIEBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFIEBottomBar.m; sourceTree = "<group>"; };
+		7DFDDAA2217F8080009C457E /* ZFIEFilterTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFIEFilterTool.h; sourceTree = "<group>"; };
+		7DFDDAA3217F8080009C457E /* ZFIEFilterTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFIEFilterTool.m; sourceTree = "<group>"; };
+		7DFDDAA5217F8995009C457E /* ZFIEToolBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFIEToolBase.m; sourceTree = "<group>"; };
+		7DFDDAA6217F8995009C457E /* ZFIEToolBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFIEToolBase.h; sourceTree = "<group>"; };
+		7DFDDAAA217F8B6C009C457E /* ZFIEToolItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFIEToolItemCell.h; sourceTree = "<group>"; };
+		7DFDDAAB217F8B6C009C457E /* ZFIEToolItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFIEToolItemCell.m; sourceTree = "<group>"; };
 		CA0C6B4FECCB31F395CE00CB /* libPods-ZFImageEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZFImageEditor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA591B138ACEF976850C4DF9 /* Pods-ZFImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFImageEditor.debug.xcconfig"; path = "Target Support Files/Pods-ZFImageEditor/Pods-ZFImageEditor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,8 +119,6 @@
 			children = (
 				7DFDDA82217F1491009C457E /* ZFImageEditorVC.h */,
 				7DFDDA83217F1491009C457E /* ZFImageEditorVC.m */,
-				7DFDDA85217F2B05009C457E /* ZFImageEditorBaseVC.h */,
-				7DFDDA86217F2B05009C457E /* ZFImageEditorBaseVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -119,6 +126,9 @@
 		7DFDDA89217F3BDD009C457E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7DFDDA9E217F8053009C457E /* ToolBase */,
+				7DFDDA9D217F802B009C457E /* FilterTool */,
+				7DFDDA99217F7BB1009C457E /* BottomBar */,
 				7DFDDA8A217F63C0009C457E /* TopBar */,
 			);
 			path = Tools;
@@ -131,6 +141,43 @@
 				7DFDDA8F217F6425009C457E /* ZFIETopBar.m */,
 			);
 			path = TopBar;
+			sourceTree = "<group>";
+		};
+		7DFDDA99217F7BB1009C457E /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				7DFDDA9A217F7BC3009C457E /* ZFIEBottomBar.h */,
+				7DFDDA9B217F7BC3009C457E /* ZFIEBottomBar.m */,
+				7DFDDAA9217F8A61009C457E /* Cell */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		7DFDDA9D217F802B009C457E /* FilterTool */ = {
+			isa = PBXGroup;
+			children = (
+				7DFDDAA2217F8080009C457E /* ZFIEFilterTool.h */,
+				7DFDDAA3217F8080009C457E /* ZFIEFilterTool.m */,
+			);
+			path = FilterTool;
+			sourceTree = "<group>";
+		};
+		7DFDDA9E217F8053009C457E /* ToolBase */ = {
+			isa = PBXGroup;
+			children = (
+				7DFDDAA6217F8995009C457E /* ZFIEToolBase.h */,
+				7DFDDAA5217F8995009C457E /* ZFIEToolBase.m */,
+			);
+			path = ToolBase;
+			sourceTree = "<group>";
+		};
+		7DFDDAA9217F8A61009C457E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7DFDDAAA217F8B6C009C457E /* ZFIEToolItemCell.h */,
+				7DFDDAAB217F8B6C009C457E /* ZFIEToolItemCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8C596961F7B76930E8611E09 /* Pods */ = {
@@ -241,9 +288,12 @@
 			files = (
 				7DFDDA70217F120B009C457E /* ViewController.m in Sources */,
 				7DFDDA7B217F120C009C457E /* main.m in Sources */,
-				7DFDDA87217F2B05009C457E /* ZFImageEditorBaseVC.m in Sources */,
+				7DFDDAAC217F8B6C009C457E /* ZFIEToolItemCell.m in Sources */,
 				7DFDDA6D217F120B009C457E /* AppDelegate.m in Sources */,
+				7DFDDA9C217F7BC3009C457E /* ZFIEBottomBar.m in Sources */,
 				7DFDDA84217F1491009C457E /* ZFImageEditorVC.m in Sources */,
+				7DFDDAA4217F8080009C457E /* ZFIEFilterTool.m in Sources */,
+				7DFDDAA7217F8995009C457E /* ZFIEToolBase.m in Sources */,
 				7DFDDA90217F6425009C457E /* ZFIETopBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

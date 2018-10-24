@@ -10,13 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, ZFIETopBarBackButtonType) {
+    ZFIETopBarBackButtonTypeNomal, // ZFIETopBarBackButtonDown
+    ZFIETopBarBackButtonTypeBack,
+    ZFIETopBarBackButtonDown,
+};
+
 @interface ZFIETopBar : UIView
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *saveButton;
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, strong) UIButton *resetButton;
 
-
+@property (nonatomic, assign) ZFIETopBarBackButtonType backButtonType;
 
 @end
 

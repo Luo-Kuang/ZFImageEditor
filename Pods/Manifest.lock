@@ -1,20 +1,28 @@
 PODS:
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
+  - IGListKit
   - Masonry
   - ReactiveObjC
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - IGListKit
     - Masonry
     - ReactiveObjC
 
 SPEC CHECKSUMS:
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: b6a97877f1ed1c7c1eabe6ba19a1c34328b8dc70
+PODFILE CHECKSUM: a688c3b6b53affe9aa2a82f9813a7f4ced4334f6
 
 COCOAPODS: 1.6.0.beta.1

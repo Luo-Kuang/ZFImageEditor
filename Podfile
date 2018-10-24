@@ -6,6 +6,7 @@ target 'ZFImageEditor' do
   # use_frameworks!
 pod 'Masonry'
 pod 'ReactiveObjC'
+pod 'IGListKit'
   # Pods for ZFImageEditor
 
 end

@@ -6,11 +6,11 @@
 //  Copyright © 2018 张帆. All rights reserved.
 //
 
-#import "ZFImageEditorBaseVC.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZFImageEditorVC : ZFImageEditorBaseVC
+@interface ZFImageEditorVC : UIViewController
 @property (nonatomic, strong) UIImage *image;
 @end
 
