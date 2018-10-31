@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, ZFIETopBarBackButtonType) {
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, strong) UIButton *resetButton;
+@property (nonatomic, strong) UIButton *saveButton;
 
 @property (nonatomic, assign) ZFIETopBarBackButtonType backButtonType;
 

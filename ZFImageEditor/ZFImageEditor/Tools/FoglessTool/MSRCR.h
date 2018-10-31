@@ -7,8 +7,6 @@
 #include "opencv2/highgui.hpp"
 #include <math.h>
 
-
-
 using namespace cv;
 using namespace std;
 

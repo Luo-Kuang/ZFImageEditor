@@ -13,7 +13,6 @@ static int NOMAL_BUTTON_WIDTH = 44;
 
 @interface ZFIETopBar ()
 
-@property (nonatomic, strong) UIButton *saveButton;
 @end
 
 @implementation ZFIETopBar
@@ -33,9 +32,9 @@ static int NOMAL_BUTTON_WIDTH = 44;
         [self addSubview:_resetButton];
         
         
-//        _saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_saveButton setImage:[UIImage imageNamed:@"zfiesavebuttonicon"] forState:UIControlStateNormal];
-//        [self addSubview:_saveButton];
+        _saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_saveButton setImage:[UIImage imageNamed:@"zfiesavebuttonicon"] forState:UIControlStateNormal];
+        [self addSubview:_saveButton];
         
         _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_shareButton setImage:[UIImage imageNamed:@"zfieexportbuttonicon"] forState:UIControlStateNormal];
@@ -62,12 +61,12 @@ static int NOMAL_BUTTON_WIDTH = 44;
             make.height.mas_equalTo(NOMAL_BUTTON_WIDTH);
         }];
         
-//        [_saveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.right.mas_equalTo(self.shareButton.mas_left).offset(0);
-//            make.centerY.mas_equalTo(self.shareButton);
-//            make.width.mas_equalTo(NOMAL_BUTTON_WIDTH);
-//            make.height.mas_equalTo(NOMAL_BUTTON_WIDTH);
-//        }];
+        [_saveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.shareButton.mas_left).offset(0);
+            make.centerY.mas_equalTo(self.shareButton);
+            make.width.mas_equalTo(NOMAL_BUTTON_WIDTH);
+            make.height.mas_equalTo(NOMAL_BUTTON_WIDTH);
+        }];
     }
     return self;
 }
