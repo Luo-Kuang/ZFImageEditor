@@ -18,7 +18,6 @@ typedef NS_ENUM(NSUInteger, ZFIETopBarBackButtonType) {
 
 @interface ZFIETopBar : UIView
 @property (nonatomic, strong) UIButton *backButton;
-@property (nonatomic, strong) UIButton *saveButton;
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, strong) UIButton *resetButton;
 

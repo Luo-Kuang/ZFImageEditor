@@ -167,6 +167,11 @@
         }];
         
         RAC(_topView.resetButton, enabled) = RACObserve(self, hasChanged);
+        
+        [[_topView.shareButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+        }];
+        
     }
     return _topView;
 }

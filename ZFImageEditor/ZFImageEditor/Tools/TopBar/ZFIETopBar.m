@@ -13,6 +13,7 @@ static int NOMAL_BUTTON_WIDTH = 44;
 
 @interface ZFIETopBar ()
 
+@property (nonatomic, strong) UIButton *saveButton;
 @end
 
 @implementation ZFIETopBar
