@@ -1,4 +1,5 @@
 PODS:
+  - GPUImage (0.1.7)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
   - IGListKit/Default (3.4.0):
@@ -8,21 +9,24 @@ PODS:
   - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
+  - GPUImage
   - IGListKit
   - Masonry
   - ReactiveObjC
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GPUImage
     - IGListKit
     - Masonry
     - ReactiveObjC
 
 SPEC CHECKSUMS:
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: a688c3b6b53affe9aa2a82f9813a7f4ced4334f6
+PODFILE CHECKSUM: db6a6db510b68b239c040b1dd5e87d64f9343871
 
 COCOAPODS: 1.6.0.beta.1

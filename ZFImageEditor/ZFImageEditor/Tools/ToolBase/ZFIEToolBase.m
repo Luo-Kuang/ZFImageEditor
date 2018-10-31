@@ -11,13 +11,16 @@
 
 #import "ZFIEToolBase.h"
 #import <UIKit/UIImage.h>
+#import "../FilterTool/UIImage+ZFIEResize.h"
 @implementation ZFIEToolBase
 
-- (instancetype)initWithName:(NSString *)name iconName:(NSString *)iconName
+- (instancetype)initWithName:(NSString *)name iconName:(NSString *)iconName operationView:(UIView *)operationView
 {
   if ((self = [super init])) {
       _name = [name copy];
       self.iconName = iconName;
+      _operationView = operationView;
+      _nomalCellSize = CGSizeMake(80, 80);
   }
   return self;
 }
@@ -73,6 +76,16 @@
 - (BOOL)isEqualToDiffableObject:(nullable id)object
 {
   return [self isEqual:object];
+}
+
+- (void)start {}
+
+- (void)end {}
+
+
+- (void)setOriginImage:(UIImage *)originImage {
+    _originImage = originImage;
+    self.thumbinalImage = [originImage thumbnailImage];
 }
 
 @end

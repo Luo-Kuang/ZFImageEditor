@@ -7,6 +7,7 @@ target 'ZFImageEditor' do
 pod 'Masonry'
 pod 'ReactiveObjC'
 pod 'IGListKit'
+pod 'GPUImage'
   # Pods for ZFImageEditor
 
 end

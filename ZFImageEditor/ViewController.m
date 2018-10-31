@@ -24,7 +24,7 @@
 - (IBAction)startButtonClick:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController *pickerVC = [[UIImagePickerController alloc] init];
-        pickerVC.allowsEditing = YES;
+        pickerVC.allowsEditing = NO;
         pickerVC.delegate = self;
         pickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:pickerVC animated:YES completion:^{
@@ -37,8 +37,11 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     ZFImageEditorVC *editor = [[ZFImageEditorVC alloc] init];
     editor.image = info[UIImagePickerControllerOriginalImage];
-    [picker presentViewController:editor animated:YES completion:^{
-        
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self presentViewController:editor animated:YES completion:^{
+            
+        }];
     }];
 }
 
